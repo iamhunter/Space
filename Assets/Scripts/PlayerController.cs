@@ -4,13 +4,12 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerController : MonoBehaviour {
 	
-	Rigidbody2D myBody;
+	//Rigidbody2D myBody;
 	public float moveForce= 50, turnSpeed = 180;
-	public Canvas canvas;
 
 	void Start ()
 	{
-		myBody = this.GetComponent<Rigidbody2D> ();
+		//myBody = this.GetComponent<Rigidbody2D> ();
 	}
 	
 	void FixedUpdate ()
@@ -23,7 +22,7 @@ public class PlayerController : MonoBehaviour {
 		float translation = CrossPlatformInputManager.GetAxis ("Vertical");
 		float rotation = CrossPlatformInputManager.GetAxis("Horizontal");*/
 
-		Vector2 moveVec = new Vector2 (0, CrossPlatformInputManager.GetAxis("Vertical")) * moveForce;
+		//Vector2 moveVec = new Vector2 (0, CrossPlatformInputManager.GetAxis("Vertical")) * moveForce;
 
 
 		Quaternion rot = transform.rotation;
@@ -44,20 +43,4 @@ public class PlayerController : MonoBehaviour {
 
 	}
 
-	void OnTriggerEnter2D(Collider2D other)
-	{
-		if (other.gameObject.CompareTag ("Planet")) 
-		{
-			canvas.gameObject.SetActive (true);
-		}
-
-	}
-	void OnTriggerExit2D(Collider2D other)
-	{
-		if (other.gameObject.CompareTag ("Planet")) 
-		{
-			canvas.gameObject.SetActive (false);
-		}
-
-	}
 }
