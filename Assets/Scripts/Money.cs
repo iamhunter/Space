@@ -6,22 +6,23 @@ public class Money : MonoBehaviour {
 
 	public static int money = 0;
 	public Text moneyDisplay;
+	public int moneyToBeAdded = 1;
 
 	// Use this for initialization
 	void Start () {
-		money = 100;
+		money = 0;
 		InvokeRepeating ("addMoney", 1f, 1f);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		moneyDisplay.text = money.ToString();
+		moneyDisplay.text = PlayerPrefs.GetInt ("Money").ToString();
 		
 	}
 
 	void addMoney()
 	{
-		int moneyToBeAdded = 10;
 		money += moneyToBeAdded;
+		PlayerPrefs.SetInt ("Money", money);
 	}
 }
