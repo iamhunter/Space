@@ -52,6 +52,7 @@
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\PlayerPlanetInteraction.cs" />
      <Compile Include="Assets\Scripts\ScrollUV.cs" />
+     <Compile Include="Assets\Scripts\TestCounters.cs" />
      <None Include="Assets\Standard Assets\Fonts\OpenSans\License!.txt" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
  <Reference Include="UnityEngine.Networking">
